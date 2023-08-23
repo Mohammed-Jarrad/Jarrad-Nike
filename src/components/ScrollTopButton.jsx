@@ -20,7 +20,7 @@ const ScrollTopButton = () => {
 
 	return (
 		<button
-			className={`fixed bottom-14 right-14 z-50  p-2 bg-coral-red rounded-full animate-pulse ${
+			className={`fixed bottom-14 right-14 max-md:bottom-6 max-md:right-6 z-50  p-2 bg-coral-red rounded-full animate-pulse ${
 				!showButton && 'hidden'
 			}`}
 			onClick={() => {
