@@ -7,10 +7,12 @@ import CustomersReviews from './sections/CustomerReviews'
 import Subscribe from './sections/Subscribe'
 import Footer from './sections/Footer'
 import Nav from './components/Nav'
+import ScrollTopButton from './components/ScrollTopButton'
 
 function App() {
 	return (
 		<main className="relative">
+			<ScrollTopButton />
 			<Nav />
 			<section className="xl:padding-l wide:padding-r padding-b">
 				<Hero />

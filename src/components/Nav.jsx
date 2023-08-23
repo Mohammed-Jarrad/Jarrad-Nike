@@ -46,13 +46,6 @@ const Nav = () => {
 		}
 	}, [])
 
-	// useEffect(() => {
-
-	// 	return () => {
-
-	// 	}
-	// }, [])
-
 	return (
 		<>
 			<header
@@ -78,15 +71,16 @@ const Nav = () => {
 
 				<ul
 					className={`
-						flex-1 flex justify-center items-center gap-8 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] 
+						flex-1 flex justify-center items-center gap-8 
+						absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] 
 						${!showNav && 'hidden'}
-						${showLinks ? 'max-lg:clip-rect-full' : ' max-lg:clip-rect-hidden'}
+						${showLinks ? 'max-lg:clip-rect-full' : ' max-lg:clip-links-hidden'}
 						max-lg:nav-links-small
 					`}
 					ref={linksUL}
 				>
 					{navLinks.map(item => (
-						<li key={item.label}>
+						<li key={item.label} onClick={() => setShowLinks(false)}>
 							<a
 								href={item.href}
 								className="
